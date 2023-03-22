@@ -1,0 +1,623 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Style For Date And Time */
+#date-time {
+    color: #fff;
+    font-weight: 500;
+    text-decoration: underline;
+    text-shadow: 0 0 10px #ff0000;
+}
+/* Styles For Navigation */
+.navbar {
+    overflow: hidden;
+    background-color: #222222;
+    background-image: url(../HTML/Logo.png);
+    background-repeat: no-repeat;
+    height: 180px;
+    font-family: 'Roboto Condensed', sans-serif;
+    width: 100%;
+    margin-top: 0;
+    z-index: 0;
+}
+
+.navbar a {
+    float: left;
+    font-size: 17px;
+    color: #ffffff;
+    text-align: center;
+    padding: 14px 17.9px;
+    text-decoration: none;
+}
+
+/* Dropdowns For Customer Service And About */
+.dropdown {
+    float: right;
+    overflow: hidden;
+}
+
+.dropdown .dropdown-btn {
+    font-size: 17px;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropdown-btn {
+    background-color: #d60900;      
+}
+
+.dropdown-items {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 170px;
+    box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.3);
+    z-index: 1;   
+}
+
+.dropdown-items a {
+    float: none;
+    color: #000000;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-items a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-items {
+    display: block;
+}
+/* Movement Of Navbar Here */
+.topnav-right {
+    float: right;
+    margin-right: 80px;
+    margin-top: 0px;
+    overflow: hidden;
+}
+
+.topnav-right .icon {
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+  .navbar a {
+    float: none;
+    display: block;
+  }
+}
+/* Heading */
+#celebration-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    font-size: 3vw;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: underline;
+    text-shadow: 0px 0px 8px #e60001;
+    animation: fadein 3.5s;
+    top: 20px;
+}
+/* Keyframe Fades The Celebrating 10 Years Of Spice Ranch In */
+@keyframes fadein {
+    from {opacity: 0}
+    to {opacity: 1}
+}
+/* Text Underneath Heading */
+#celebration-heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    font-size: 2vw;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: underline;
+    text-shadow: 0px 0px 8px #2eb62c;
+    animation: slidein 3.5s;
+    top: 90px;
+}
+/* Text Underneath Heading */
+#celebration-p {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    font-size: 2vw;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: underline;
+    text-shadow: 0px 0px 8px #2eb62c;
+    animation: slidein 3.5s;
+    top: 130px;
+}
+/* Slides The Text Underneath The Title In From The Left */
+@keyframes slidein {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+/* Responsive Celebration Text */
+@media screen and (max-width: 400px) {
+    #celebration-title, #celebration-heading, #celebration-p {
+        width: 100%;
+        top: 300px;
+        font-size: 30px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+/* End Of Celebration Text */
+/* Start of Style For Articles */
+.title-text {
+    font-size: 50px;
+    text-align: center;
+    margin-top: 900px;
+    font-family: "Roboto Condensed", sans-serif;
+    text-decoration: underline;
+    text-shadow: 0 0 2px #e60001;
+}
+
+.special {
+    margin: 30px 0;
+    display: flex;
+}
+
+.special-icon .fa{
+    font-size: 115px;
+    margin-right: 20px;
+}
+
+.special-heading {
+    font-size: 30px;
+    text-transform: capitalize;
+    color: #e60001;
+    font-family: "Roboto Condensed", sans-serif;
+    text-decoration: underline;
+}
+
+.special-info {
+    line-height: 1.5;
+    margin-top: 10px;
+    font-family: "Oswald", sans-serif;
+    font-size: 25px;
+    font-weight: 400;
+}
+
+.special-heading:hover{
+    cursor: pointer;
+    color: #610000;
+}
+/* Responsiveness For Phones */
+@media screen and (min-width: 576px) {
+    .special-center {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .special {
+        flex: 0 0 calc(50% - 16px);
+    }
+}
+/* 
+/* Responsiveness For Wide Monitors */
+@media screen and (min-width: 972px) {
+    .special {
+        flex: 0 0 calc(33.3% - 16px);
+    }
+}
+
+.special-img {
+    width: 276px;
+    height: 276px;
+    box-shadow: 2px 2px 10px #ff0000;
+    margin-top: 10px;
+}
+/* End Of Specials Article */
+/* Start Of Opening Times */
+#opening-image {
+    background: url(../Images/spices.jpg) center/cover fixed no-repeat;
+    min-height: 60vh;
+}
+
+#opening-text {
+    min-height: 60vh;
+    align-items: center;
+    columns: #000;
+    padding: 20px 0;
+    background: #fff;
+    text-align: center;
+}
+
+#opening-text-center h1 {
+    width: 90%;
+    margin: 0 auto;
+    font-size: 100px;
+    font-family: "Roboto Condensed", sans-serif;
+    text-decoration: underline;
+    text-shadow: 0 0 2px #e60001;
+}
+
+#times {
+    float: right;
+    margin-top: 20px;
+    margin-right: 200px;
+    text-align: left;
+    font-size: 30px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+}
+
+#opening-text h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+#opening-text p {
+    margin: 20px 0;
+    line-height: 2;
+}
+
+#map-text {
+    font-size: 40px;
+    font-size: 40px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    text-decoration: underline;
+    color: #e60001;
+}
+
+@media screen and (min-width: 775) {
+    .opening {
+        display: flex;
+    }
+    #opening-text {
+        flex: 0 0 30%;
+    }
+    #opening-image {
+        flex: 0 0 70%;
+    }
+    iframe {
+        flex: 0 0 100%;
+    }
+    #map-text {
+        flex: 0 0 100%;
+    }
+}
+/* Footer Styles */
+.footer {
+    bottom: 0;
+    background-color: #222222;
+}
+
+#top-footer {
+    width: 100%;
+    height: 250px;
+}
+
+#bottom-footer {
+    background-color: #000;
+}
+/* Style For The Login Page */
+.background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+	background-position: center;
+	background-size: cover;
+	background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(pizza.jpg);
+}
+
+.form-box {
+	width: 400px;
+	height: 500px;
+	position: relative;
+	padding: 5px;
+    margin: 120px auto; 
+	background: #ffffff;
+	overflow: hidden;
+    font-family: "Oswald", sans-serif;
+    
+}
+
+#user-icon {
+    position: absolute;
+    left: 190px;
+    font-size: 25px;
+}
+
+.button-holder {
+	width: 230px;
+	margin: 35px auto;
+	position: relative;
+	box-shadow: 0 0 20px 9px #ff61241f;
+	border-radius: 30px;
+}
+
+.slide-btn {
+	position: relative;
+	outline: none;
+	border: 0;
+	background: transparent;
+	padding: 10px 30px;
+	cursor: pointer;
+    font-size: 18px;
+    font-family: "Oswald", sans-serif;
+    left: 8px;
+}
+
+#button {
+	position: absolute;
+	width: 120px;
+	height: 100%;
+	top: 0;
+	left: 0;
+	border-radius: 30px;
+	transition: .5s;
+	background: linear-gradient(to right, #e60001, #eb1c01, #f03801, #f55301, #fa6f01, #ff8b01);
+}
+
+.socials {
+	margin: 30px auto;
+	text-align: center;
+}
+
+.input-section {
+	position: absolute;
+	top: 190px;
+	width: 290px;
+	transition: .5s;
+}
+	
+.input-field {
+	width: 100%;
+	padding: 10px 0;
+	margin: 5px 0;
+	border-top: 0;
+	border-bottom: 1px solid #999;
+	border-left: 0;
+	border-right: 0;
+	outline: none;
+	background: transparent;
+    font-size: 17px;
+    font-family: "Oswald", sans-serif;
+}
+
+.password-field {
+    width: 100%;
+	padding: 10px 0;
+	margin: 5px 0;
+	border-top: 0;
+	border-bottom: 1px solid #999;
+	border-left: 0;
+	border-right: 0;
+	outline: none;
+	background: transparent;
+    font-size: 17px;
+    font-family: "Oswald", sans-serif;
+}
+
+.enter-button {
+	width: 85%;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	background: linear-gradient(to right, #e60001, #eb1c01, #f03801, #f55301, #fa6f01, #ff8b01);
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+    font-size: 20px;
+    font-family: "Oswald", sans-serif;
+}
+
+.enter-button:hover {
+    background: linear-gradient(to right, #2eb62c, #57c84d, #83d475, #abe098, #c5e8b7);
+}
+
+.check-box {
+	margin: 30px 10px 30px 0;
+}
+
+span {
+	color: #000000;
+	font-size: 18px;
+	bottom: 68px;
+	position: absolute;
+}
+    
+#login {
+	left: 50px;
+}
+
+#signup {
+	left: 450px;
+}
+
+/* Gallery */
+
+.gallery {
+    margin: 20px 100px;
+    padding: 50px;
+}
+
+.gallery img {
+    width: 230px;
+    padding: 13px;
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+
+.gallery img:hover {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+/* Style For Contact Form */
+
+.contact-page {
+    font-family: "Oswald", sans-serif;
+    box-sizing: border-box;
+    position: relative;
+    padding: 50px 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    top: -100px;
+}
+
+.contact {
+    width: 100%;
+    margin-top: -180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact .contact-info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact .contact-info .side {
+    position: relative;
+    padding: 50px 0;
+    display: flex;
+    left: 150px;
+}
+
+.contact .contact-info .side .icons {
+    background: #ffffff;
+    height: 60px;
+    min-width: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 75%;
+    font-size: 30px;
+}
+
+.contact .contact-info .side .text {
+    display: flex;
+    margin-left: 25px;
+    font-size: 25px;
+    flex-direction: column;
+    color: #ffffff;
+    font-weight: 300;
+    
+}
+
+.contact .contact-info .side .text h3 {
+    font-size: 30px;
+    font-weight: 500;
+    text-decoration: underline;
+    color: #E34444;
+}
+
+.contact-form {
+    background: #222222;
+    width: 40%;
+    padding: 50px;
+}
+
+.contact-form h2 {
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 400;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.contact-form .input-fields {
+    width: 100%;
+    position: relative;
+    margin-top: 15px;
+    text-decoration: underline;
+    color: #fff;
+}
+
+.contact-form .input-fields input,
+.contact-form .input-fields textarea
+{
+    width: 100%;
+    padding: 5px 0;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 3px solid #039139;
+    outline: none;
+    resize: none;
+    font-size: 15px;
+}
+
+label {
+    color: #ffffff;
+    font-size: 20px;
+}
+
+.contact-form .input-fields input[type="submit"] {
+    background: linear-gradient(to right, #e60001, #eb1c01, #f03801, #f55301, #fa6f01, #ff8b01);
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 16px;  
+    font-weight: bold;
+    transition-delay: 0.5s;
+}
+
+.input-fields input[type="submit"]:hover {
+    background: linear-gradient(to right, #2eb62c, #57c84d, #83d475, #abe098, #c5e8b7);
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+@media (max-width: 991px) {
+    .contact {
+        padding: 50px;
+    }   
+    .contact {
+        flex-direction: column;   
+    }
+    .contact .contact-info {
+        margin-bottom: 40px;
+    }
+    .container .contact-info,
+    .contact-form 
+    {
+        width: 100%;
+    }
+}

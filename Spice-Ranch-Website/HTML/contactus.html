@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>Contact Us</title>
+    <!-- My Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+    <!-- Roboto Condensed Font Link -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Oswald Font Link -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <!-- Font Awesome 4 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Animation Effects -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body style="background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(..//HTML/back.jpg);">
+<!-- Start Of Heading -->
+<header>
+<div class="navbar">
+    <div class="topnav-right" id="topnav">
+    <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i>Home</a>
+    <a href="login.html"><i class="fa fa-fw fa-user"></i>Log In</a>
+    <a href="order.html"><i class="fa fa-cutlery"></i> Order</a>
+    <a href="gallery.html"><i class="fa fa-picture-o"></i> Gallery</a>
+    <div class="dropdown">
+        <button class="dropdown-btn">About <i class="fa fa-chevron-circle-down"></i></button>
+        <div class="dropdown-items">
+            <a href="ourstory.html">Our Story</a>
+            <a href="meettheteam.html">Meet The Team</a>
+            <a href="location.html">Location</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropdown-btn">Customer Service <i class="fa fa-chevron-circle-down"></i></button>
+        <div class="dropdown-items">
+            <a href="contactus.html">Contact Us</a>
+            <a href="reviews.html">Reviews</a>
+        </div>
+    </div>
+    </div>
+</div>
+</header>
+<!-- End Of Heading -->
+<!-- Contact Form -->
+<section class="contact-page">
+    <div class="contact">
+        <div class="contact-info">
+            <div class="side">
+                <div class="icons"><i class="fa fa-map-pin"></i></div>
+                <div class="text">
+                    <h3>Address</h3>
+                    <p>279 Blackmoorfoot Rd <br>Crosland Moor <br>Huddersfield HD4 5RL</p>
+                </div>
+            </div>
+            <div class="contact-back">
+                <div class="side">
+                <div class="icons"><i class="fa fa-envelope"></i></div>
+                <div class="text">
+                    <h3>Email</h3>
+                    <p>example@spice-ranch.com</p>
+                </div>
+                </div>
+            </div>
+            <div class="contact-back">
+                <div class="side">
+                <div class="icons"><i class="fa fa-phone"></i></div>
+                <div class="text">
+                    <h3>Telephone Number</h3>
+                    <p>01484 646432</p>
+                </div>
+                </div>
+            </div>
+        </div>
+        <div class="contact-form">
+            <form name="contactForm">
+                <h2>How Can We Help?</h2>
+                <div class="input-fields">
+                    <label>Full Name:</label>
+                    <input type="text" name="fname" placeholder="Full Name" required>
+                </div>
+                <div class="input-fields">
+                    <label>E-mail Address:</label>
+                    <input type="email" name="email" placeholder="E-mail Address" required>
+                </div>
+                <div class="input-fields">
+                    <label>Write Your Message Below...</label>
+                    <textarea name="message" placeholder="Your Message..." required></textarea>
+                </div>
+                <div class="input-fields">
+                    <input type="submit" name="" onclick="contactValidation()" value="Send Message">
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<script src="../JAVASCRIPT/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <!-- Roboto Condensed Font Link -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Oswald Font Link -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
+    <!-- Font Awesome 4 Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Animation Effects -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- My Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="../CSS/style.css">
+</head>
+<body onload="checkCookie()">
+<header>
+<div class="navbar">
+    <div class="topnav-right">
+    <a class="active" href="index.html"><i class="fa fa-fw fa-home"></i>Home</a>
+    <a href="login.html"><i class="fa fa-fw fa-user"></i>Log In</a>
+    <a href="order.html"><i class="fa fa-cutlery"></i> Order</a>
+    <a href="gallery.html"><i class="fa fa-picture-o"></i> Gallery</a>
+    <div class="dropdown">
+        <button class="dropdown-btn">About <i class="fa fa-chevron-circle-down"></i></button>
+        <div class="dropdown-items">
+            <a href="ourstory.html">Our Story</a>
+            <a href="meettheteam.html">Meet The Team</a>
+            <a href="location.html">Location</a>
+        </div>
+    </div>
+    <div class="dropdown">
+        <button class="dropdown-btn">Customer Service <i class="fa fa-chevron-circle-down"></i></button>
+        <div class="dropdown-items">
+            <a href="contactus.html">Contact Us</a>
+            <a href="reviews.html">Reviews</a>
+        </div>
+    </div>
+    </div>
+</div>
+</header>
+<!-- Log In Container -->
+<div class="background">
+    <div class="form-box">
+        <div id="user-icon"><i class="fa fa-user-circle-o"></i></div>
+        <div class="button-holder">
+            <div id="button"></div>
+        <button type="button" class="slide-btn" onclick="login()">Log In</button>
+        <button type="button" class="slide-btn" onclick="signup()">Sign Up</button>
+        </div>
+        <div class="socials">
+            <a href="https://en-gb.facebook.com/"><i class="fa fa-facebook-official" style="font-size: 25px;"></i></a>
+            <a href="https://myaccount.google.com/?utm_source=sign_in_no_continue"><i class="fa fa-google" style="font-size: 25px;"></i></a>
+        </div>
+        <form class="input-section" id="login">
+            <input type="text" class="input-field" placeholder="Username" name="u-name" required>
+            <input type="password" class="password-field" placeholder="Password" name="password" required>
+            <input type="checkbox" class="check-box"><span>Remember me</span>
+            <button type="submit" class="enter-button" onclick="loginValidation()">Log In</button>
+        </form>
+        <form class="input-section" id="signup" name="loginForm">
+            <input type="text" class="input-field" name="u-name" placeholder="Username" required>
+            <input type="email" class="input-field" name ="e-mail" placeholder="Email" required>
+            <input type="password" class="password-field" name="password" placeholder="Password" required>
+            <input type="checkbox" name="checkbox" class="check-box" required><span>By creating an account you agree to our Terms and Conditions.</span>
+            <button type="submit" class="enter-button" onclick="signinValidation()">Register</button>
+        </form>
+<!-- End Of Log In Form - Start Of JavaScript For Log In -->
+    </div>
+</div>
+<!-- End Of Log In Form - Start Of JavaScript For Log In -->
+<script>
+    // Changes The Position Of Content After Button Is Clicked
+    var x = document.getElementById("login");
+    var y = document.getElementById("signup");
+    var z = document.getElementById("button");
+    
+function login() {
+    x.style.left = "50px";
+    y.style.left = "450px";
+    z.style.left = "0px";
+}
+    
+function signup() {
+    x.style.left = "-400px";
+    y.style.left = "50px";
+    z.style.left = "110px";
+}
+// Validation For The Sign Up Section     
+function signinValidation() {
+    var a = document.forms["loginForm"]["u-name"].value;
+    if (a == "") {
+        alert("Please Create A Username");
+        return false;
+    }
+    var b = document.forms["loginForm"]["e-mail"].value; 
+    if (b == "") {
+        alert("Please Enter Your E-mail Address");
+        return false; 
+    }
+    var c = document.forms["loginForm"]["password"].value; 
+    if (c == "") {
+        alert("Please Create A Password");
+        return false; 
+    }
+}
+</script>
+<!-- End Of JavaScript For Log In -->
+<!-- Start Of Footer -->
+
+<script src="../JAVASCRIPT/script.js"></script> 
+</body>
+</html>
